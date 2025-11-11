@@ -212,17 +212,19 @@ onset   duration    trial_type  rewards
 1541.89997  0   happiness_rating      36
 """
 
+
 def cleanup(input_data):
-  lines = input_data.splitlines()
-  rows = []
-  for line in lines[1:]:
-      row = line.split()
-      rows.append(
-          {
-              "onset": row[0],
-              "duration": row[1],
-              "trial_type": row[2],
-              "rewards": row[3],
-          }
-      )
-  return rows
+    lines = input_data.splitlines()
+    rows = []
+    for line in lines[1:]:
+        row = line.split()
+        rows.append(
+            {
+                "onset": row[0],
+                "duration": row[1],
+                "trial_type": row[2],
+                "rewards": row[3],
+            }
+        )
+    return rows
+
